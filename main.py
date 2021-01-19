@@ -1,6 +1,10 @@
+# imports
 import requests
-url = 'http://localhost:3000/sample.php'
-obj = {'username':'Usf', 'password':'123456'}
+import stdiomask
 
-res = requests.post(url, data = obj)
-print(res.text)
+url = 'http://localhost:3000/sign_in.php'
+
+username = input('username: ')
+password = stdiomask.getpass(prompt='password: ', mask='*')
+
+obj = {'username' : username, 'password' : password}
