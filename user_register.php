@@ -7,8 +7,4 @@
     $_email    = $_POST['email'];
 
 
-    register_user($_username, $_password, $_firtname, $_lastname, $_email){
-
-    }
-
 ?>

@@ -1,10 +1,13 @@
 # imports
 import requests
 import stdiomask
+from tkinter import *
 
-url = 'http://localhost:3000/sign_in.php'
-
-username = input('username: ')
-password = stdiomask.getpass(prompt='password: ', mask='*')
-
-obj = {'username' : username, 'password' : password}
+# Initializes window object
+window = Tk()
+label = Label(window, text="Hello", font=("Arial Bold", 50))
+label.grid(column=0, row=0)
+btn = Button(window, text="Click Me")
+btn.grid(column=1, row=0)
+# This renders the window
+window.mainloop()
