@@ -1,4 +1,6 @@
-from login_box import Ui_Form
+# Imports
+import requests
+from ui.Ui_login_form import Ui_Form
 from PyQt5 import QtWidgets as qtw
 from PyQt5 import QtCore as qtc
 
@@ -9,18 +11,25 @@ class LoginWindow(qtw.QWidget, Ui_Form):
         # passing any arguments
 
         self.setupUi(self)
-
-        self.pushButton.clicked.connect(self.authenticate)
+        self.buttonSubmit.clicked.connect(self.authenticate)
 
     def authenticate(self):
-        username = self.lineEditUserName.text()
-        password = self.lineEditPassword.text()
+        username = self.editUsername.text()
+        password = self.editPassword.text()
 
-        if username == 'user' and password == 'pass':
-            qtw.QMessageBox.information(self, 'Success', 'You are now logged in')
-        else:
+        loginres = self.authenticateCreds(username, password)
+        if loginres == '-1':
             qtw.QMessageBox.critical(self, 'Error', 'Failed to login')
+        else:
+            userid = loginres
+            qtw.QMessageBox.information(self, 'Success', 'You are now logged in, UserID: ' + userid)
 
+    def authenticateCreds(self, username, password):
+        url = 'http://localhost:3000/php/user_authorize.php'
+        usercreds = { 'username': username, 'password': password }
+        result = requests.post(url, data = usercreds)
+        # qtw.QMessageBox.information(self, 'look at this', result.text)
+        return result.text
 
 if __name__ == '__main__':
     app = qtw.QApplication([])

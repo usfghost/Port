@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'login_box.ui'
+# Form implementation generated from reading ui file '/home/ubuntu/Projects/Port/ui/login_form.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -15,6 +15,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(441, 139)
+        Form.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
         self.formLayout = QtWidgets.QFormLayout(Form)
         self.formLayout.setObjectName("formLayout")
         self.label = QtWidgets.QLabel(Form)
@@ -29,24 +30,24 @@ class Ui_Form(object):
         self.label_3 = QtWidgets.QLabel(Form)
         self.label_3.setObjectName("label_3")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_3)
-        self.lineEditUserName = QtWidgets.QLineEdit(Form)
-        self.lineEditUserName.setObjectName("lineEditUserName")
-        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.lineEditUserName)
-        self.lineEditPassword = QtWidgets.QLineEdit(Form)
-        self.lineEditPassword.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.lineEditPassword.setObjectName("lineEditPassword")
-        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.lineEditPassword)
-        self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setObjectName("pushButton")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.pushButton)
+        self.editUsername = QtWidgets.QLineEdit(Form)
+        self.editUsername.setObjectName("editUsername")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.editUsername)
+        self.editPassword = QtWidgets.QLineEdit(Form)
+        self.editPassword.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.editPassword.setObjectName("editPassword")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.editPassword)
+        self.buttonSubmit = QtWidgets.QPushButton(Form)
+        self.buttonSubmit.setObjectName("buttonSubmit")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.buttonSubmit)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Port - Login"))
         self.label.setText(_translate("Form", "Login"))
         self.label_2.setText(_translate("Form", "Username"))
         self.label_3.setText(_translate("Form", "Password"))
-        self.pushButton.setText(_translate("Form", "Login"))
+        self.buttonSubmit.setText(_translate("Form", "Login"))
