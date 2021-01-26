@@ -1,0 +1,16 @@
+current:
+	{2TSLA, 4ARKK}
+	2*840, 4*145
+	{0.74TSLA, 0.26ARKK}
+ultimate:
+	{AAPL, TSLA, NIO, ARKK, QQQ, BRKK}
+	{0.2AAPL, 0.3TSLA, 0.15NIO, 0.15ARKK, 0.1QQQ, 0.1BRKB}
+input:
+	500$
+output:
+	{1AAPL, 1ARKK, 1NIO}
+	{8NIO}
+	{3AAPL}
+	{3ARKK}
+
+
