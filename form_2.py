@@ -22,7 +22,8 @@ class LoginWindow(qtw.QMainWindow, Ui_Form2):
             UPosition("TSLA",6,548), 
             UPosition("NIO", 22, 54.13), 
             UPosition("ARKK", 10, 128.99), 
-            UPosition("NOK", 34, 5.29)
+            UPosition("NOK", 34, 5.29),
+            UPosition("GME",1,243.5)
         ])
         
         # self.portfolio.positions = [UPosition("TSLA",6,548), UPosition("NIO", 22, 55), UPosition("ARKK", 10, 129), UPosition("NOK", 34, 5.29)]
@@ -33,7 +34,7 @@ class LoginWindow(qtw.QMainWindow, Ui_Form2):
         self.initializeTable()
 
     def initializeTable(self):
-        self.tablesheet.setRowCount(5)
+        self.tablesheet.setRowCount(len(self.portfolio.positions) + 1)
         self.tablesheet.setColumnCount(8)
         rowValues = ["TICKER", "QUANTITY", "BUY PRICE", "BUY VALUE", "LIVE PRICE", "LIVE VALUE", "P/L($)", "P/L(%)"]
         self.printRow(rowValues, 0)

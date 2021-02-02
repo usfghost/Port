@@ -19,7 +19,7 @@ class Ui_Form2(object):
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(10, 0, 191))
@@ -31,16 +31,16 @@ class Ui_Form2(object):
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Window, brush)
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(191, 191, 191))
@@ -52,16 +52,16 @@ class Ui_Form2(object):
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Window, brush)
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.WindowText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
         brush = QtGui.QBrush(QtGui.QColor(191, 191, 191))
@@ -73,10 +73,10 @@ class Ui_Form2(object):
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ButtonText, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
-        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush = QtGui.QBrush(QtGui.QColor(34, 34, 51))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         Form2.setPalette(palette)
@@ -85,8 +85,22 @@ class Ui_Form2(object):
         Form2.setFont(font)
         Form2.setWindowOpacity(1.0)
         Form2.setAutoFillBackground(False)
-        Form2.setStyleSheet("background-color: black;\n"
-"color: white")
+        Form2.setStyleSheet("QWidget{\n"
+"    background-color: #223;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"    background-color: black;\n"
+"    color: white;\n"
+"    border: \n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: grey;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    background-color: silver;\n"
+"}")
         Form2.setUnifiedTitleAndToolBarOnMac(True)
         self.centralwidget = QtWidgets.QWidget(Form2)
         self.centralwidget.setObjectName("centralwidget")
@@ -96,44 +110,29 @@ class Ui_Form2(object):
         self.label_3.setObjectName("label_3")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label_3)
         self.editTicker = QtWidgets.QLineEdit(self.centralwidget)
-        self.editTicker.setStyleSheet("padding: 5px;\n"
-"border-radius: 5px;\n"
-"border: 2px solid white;\n"
-"background-color: black")
+        self.editTicker.setStyleSheet("")
         self.editTicker.setObjectName("editTicker")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.editTicker)
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setObjectName("label")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label)
         self.editQuantity = QtWidgets.QLineEdit(self.centralwidget)
-        self.editQuantity.setStyleSheet("padding: 5px;\n"
-"border-radius: 5px;\n"
-"border: 2px solid white;\n"
-"background-color: black")
+        self.editQuantity.setStyleSheet("")
         self.editQuantity.setObjectName("editQuantity")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.editQuantity)
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setObjectName("label_2")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_2)
         self.editBuyPrice = QtWidgets.QLineEdit(self.centralwidget)
-        self.editBuyPrice.setStyleSheet("padding: 5px;\n"
-"border-radius: 5px;\n"
-"border: 2px solid white;\n"
-"background-color: black")
+        self.editBuyPrice.setStyleSheet("")
         self.editBuyPrice.setObjectName("editBuyPrice")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.editBuyPrice)
         self.buttonAddPosition = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonAddPosition.setStyleSheet("padding: 5px;\n"
-"border-radius: 5px;\n"
-"border: 2px solid white;\n"
-"background-color: black")
+        self.buttonAddPosition.setStyleSheet("")
         self.buttonAddPosition.setObjectName("buttonAddPosition")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.buttonAddPosition)
         self.buttonGetLivePrice = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonGetLivePrice.setStyleSheet("padding: 5px;\n"
-"border-radius: 5px;\n"
-"border: 2px solid white;\n"
-"background-color: black")
+        self.buttonGetLivePrice.setStyleSheet("")
         self.buttonGetLivePrice.setObjectName("buttonGetLivePrice")
         self.formLayout.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.buttonGetLivePrice)
         self.tablesheet = QtWidgets.QTableWidget(self.centralwidget)
