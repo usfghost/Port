@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/ubuntu/Projects/Port/ui/login_form.ui'
+# Form implementation generated from reading ui file '/Users/cbi/Projects/Port/ui/login_form.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -14,32 +14,49 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(441, 139)
+        Form.resize(351, 498)
+        Form.setStyleSheet("QWidget {\n"
+"    background-color: rgb(42, 42, 42);\n"
+"    color: #EAEAEA;\n"
+"}\n"
+"\n"
+"QLineEdit {\n"
+"    padding: 10px;\n"
+"    border: 1px solid #D96900;\n"
+"    border-radius: 10px;\n"
+"}\n"
+"QPushButton {\n"
+"    background: #D96900;\n"
+"    border: 1px solid #D96900;\n"
+"    border-radius: 10px;\n"
+"}")
         Form.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
-        self.formLayout = QtWidgets.QFormLayout(Form)
-        self.formLayout.setObjectName("formLayout")
         self.label = QtWidgets.QLabel(Form)
+        self.label.setGeometry(QtCore.QRect(50, 70, 251, 91))
         font = QtGui.QFont()
-        font.setPointSize(16)
+        font.setFamily("Avenir Next")
+        font.setPointSize(96)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label)
-        self.label_2 = QtWidgets.QLabel(Form)
-        self.label_2.setObjectName("label_2")
-        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
-        self.label_3 = QtWidgets.QLabel(Form)
-        self.label_3.setObjectName("label_3")
-        self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_3)
         self.editUsername = QtWidgets.QLineEdit(Form)
+        self.editUsername.setGeometry(QtCore.QRect(40, 210, 271, 51))
         self.editUsername.setObjectName("editUsername")
-        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.editUsername)
         self.editPassword = QtWidgets.QLineEdit(Form)
+        self.editPassword.setGeometry(QtCore.QRect(40, 270, 271, 51))
         self.editPassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.editPassword.setObjectName("editPassword")
-        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.editPassword)
         self.buttonSubmit = QtWidgets.QPushButton(Form)
+        self.buttonSubmit.setGeometry(QtCore.QRect(40, 330, 271, 51))
         self.buttonSubmit.setObjectName("buttonSubmit")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.buttonSubmit)
+        self.label_2 = QtWidgets.QLabel(Form)
+        self.label_2.setGeometry(QtCore.QRect(70, 180, 201, 16))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setGeometry(QtCore.QRect(60, 400, 221, 20))
+        self.label_3.setStyleSheet("QLabel {\n"
+"    text-decoration: underline;\n"
+"}")
+        self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -47,7 +64,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Port - Login"))
-        self.label.setText(_translate("Form", "Login"))
-        self.label_2.setText(_translate("Form", "Username"))
-        self.label_3.setText(_translate("Form", "Password"))
-        self.buttonSubmit.setText(_translate("Form", "Login"))
+        self.label.setText(_translate("Form", "PORT"))
+        self.editUsername.setPlaceholderText(_translate("Form", "Email"))
+        self.editPassword.setPlaceholderText(_translate("Form", "Password"))
+        self.buttonSubmit.setText(_translate("Form", "SIGN IN"))
+        self.label_2.setText(_translate("Form", "Your Ultimate Portfolio Manager"))
+        self.label_3.setText(_translate("Form", "Don\'t have an account, Sign up now."))

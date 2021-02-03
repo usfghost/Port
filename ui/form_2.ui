@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>666</width>
-    <height>430</height>
+    <width>871</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="palette">
@@ -25,9 +25,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
@@ -61,18 +61,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
@@ -90,9 +90,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
@@ -126,18 +126,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
@@ -155,9 +155,9 @@
      <colorrole role="Button">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
@@ -191,18 +191,18 @@
      <colorrole role="Base">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Window">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>34</red>
-        <green>34</green>
-        <blue>51</blue>
+        <red>42</red>
+        <green>42</green>
+        <blue>42</blue>
        </color>
       </brush>
      </colorrole>
@@ -225,14 +225,15 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget{
-	background-color: #223;
+	background-color: rgb(42, 42, 42);
 	color: white;
 }
-
 QPushButton{
-	background-color: black;
+	background-color: rgb(42, 42, 42);
 	color: white;
-	border: 
+	padding: 7px;
+	border: 2px solid white;
+	border-radius: 5px;
 }
 QPushButton:hover {
 	background-color: grey;
@@ -245,86 +246,76 @@ QPushButton:pressed{
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>What did you buy?</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="editTicker">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>TSLA</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>How many shares did you buy?</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="editQuantity">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>6</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>What price did you pay per share?</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="editBuyPrice">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>548</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QPushButton" name="buttonAddPosition">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Add Poisition</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QPushButton" name="buttonGetLivePrice">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Start Live Update Thread</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0" colspan="2">
-     <widget class="QTableWidget" name="tablesheet">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <widget class="QTableWidget" name="tablePositions">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>201</y>
+      <width>851</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QTableWidget" name="tablePortfolio">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>851</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Positions</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Portfolio</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAbout">

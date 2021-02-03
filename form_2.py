@@ -23,32 +23,43 @@ class LoginWindow(qtw.QMainWindow, Ui_Form2):
             UPosition("NIO", 22, 54.13), 
             UPosition("ARKK", 10, 128.99), 
             UPosition("NOK", 34, 5.29),
-            UPosition("GME",1,243.5)
+            UPosition("GME",1, 243.5)
         ])
         
         # self.portfolio.positions = [UPosition("TSLA",6,548), UPosition("NIO", 22, 55), UPosition("ARKK", 10, 129), UPosition("NOK", 34, 5.29)]
 
         self.setupUi(self)
-        self.buttonAddPosition.clicked.connect(self.addPosition)
-        self.buttonGetLivePrice.clicked.connect(self.startLiveThread)
-        self.initializeTable()
+        # self.buttonAddPosition.clicked.connect(self.addPosition)
+        # self.buttonGetLivePrice.clicked.connect(self.startLiveThread)
+        self.startLiveThread()
+        self.initializeTablePositions()
+        self.initializeTablePortfolio()
 
-    def initializeTable(self):
-        self.tablesheet.setRowCount(len(self.portfolio.positions) + 1)
-        self.tablesheet.setColumnCount(8)
-        rowValues = ["TICKER", "QUANTITY", "BUY PRICE", "BUY VALUE", "LIVE PRICE", "LIVE VALUE", "P/L($)", "P/L(%)"]
-        self.printRow(rowValues, 0)
+    def initializeTablePortfolio(self):
+        self.tablePortfolio.setRowCount(2)
+        self.tablePortfolio.setColumnCount(4)
+        header = ["COST", "VALUE", "P/L($)", "P/L(%)"]
+        self.printRow(self.tablePortfolio, header, 0)
+        portfolioRow = self.portfolio.toRowArray()
+        self.printRow(self.tablePortfolio, portfolioRow, 1)
+        return
+
+    def initializeTablePositions(self):
+        self.tablePositions.setRowCount(len(self.portfolio.positions) + 1)
+        self.tablePositions.setColumnCount(8)
+        header = ["TICKER", "QUANTITY", "BUY PRICE", "BUY VALUE", "LIVE PRICE", "LIVE VALUE", "P/L($)", "P/L(%)"]
+        self.printRow(self.tablePositions, header, 0)
         for i in range(0, len(self.portfolio.positions)):
             positionData = self.portfolio.positions[i].toRowArray()
-            self.printRow(positionData, i+1)
+            self.printRow(self.tablePositions, positionData, i+1)
 
     def startLiveThread(self):
         t = Thread(target=self._getLiveData)
         t.start()
 
-    def printRow(self, rowValues, rowIndex):
+    def printRow(self, table, rowValues, rowIndex):
         for i in range(len(rowValues)):
-            self.tablesheet.setItem(rowIndex,i,qtw.QTableWidgetItem(str(rowValues[i])))
+            table.setItem(rowIndex,i,qtw.QTableWidgetItem(str(rowValues[i])))
 
     def addPosition(self):
         quantity = float(self.editQuantity.text())
@@ -56,16 +67,16 @@ class LoginWindow(qtw.QMainWindow, Ui_Form2):
         ticker = self.editTicker.text()
         position = UPosition(ticker, quantity, price)
         self.portfolio.positions.append(position)
-        self.initializeTable()
+        self.initializeTablePositions()
 
     def _getLiveData(self):
         while(True):
             for i in range(0, len(self.portfolio.positions)):
                 self.portfolio.positions[i].updateData()
-                updatedData = self.portfolio.positions[i].toRowArray()
-                self.printRow(self.portfolio.positions[i].toRowArray(), i+1)
+                updatedPositionsData = self.portfolio.positions[i].toRowArray()
+                self.printRow(self.tablePositions, self.portfolio.positions[i].toRowArray(), i+1)
             self.portfolio.updateData()
-            self.portfolio.toRowArray()
+            self.printRow(self.tablePortfolio, self.portfolio.toRowArray(), 1)
             self.portfolio.printPortfolio()
 
 if __name__ == '__main__':
