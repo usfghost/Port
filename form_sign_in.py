@@ -1,10 +1,10 @@
 # Imports
 import requests
-from ui.Ui_login_form import Ui_Form
+from ui.Ui_form_sign_in import Ui_Form
 from PyQt5 import QtWidgets as qtw
 from PyQt5 import QtCore as qtc
 
-class LoginWindow(qtw.QWidget, Ui_Form):
+class SignInWindow(qtw.QWidget, Ui_Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -34,7 +34,7 @@ class LoginWindow(qtw.QWidget, Ui_Form):
 if __name__ == '__main__':
     app = qtw.QApplication([])
 
-    widget = LoginWindow()
+    widget = SignInWindow()
     widget.show()
 
     app.exec_()
