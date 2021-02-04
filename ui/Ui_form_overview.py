@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/cbi/Projects/Port/ui/form_overview.ui'
+# Form implementation generated from reading ui file '/Users/joseph/Projects/Port/ui/form_overview.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -19,45 +19,33 @@ class Ui_MainWindow(object):
 "    background-color: rgb(42, 42, 42);\n"
 "    color: #EAEAEA;\n"
 "}\n"
-"QPushButton {\n"
-"    padding: 10px;\n"
-"    border: 1px solid white;\n"
-"    border-radius: 10px;\n"
+"QPushButton{\n"
+"    background-color: rgb(42, 42, 42);\n"
+"    color: white;\n"
+"    padding: 7px;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 5px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: grey;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    background-color: silver;\n"
 "}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(30, 20, 211, 16))
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(30, 60, 141, 21))
-        self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(30, 100, 201, 61))
-        font = QtGui.QFont()
-        font.setFamily("Avenir Next")
-        font.setPointSize(46)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(30, 160, 121, 21))
-        self.label_4.setObjectName("label_4")
-        self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(20, 210, 241, 61))
-        font = QtGui.QFont()
-        font.setFamily("Avenir Next")
-        font.setPointSize(46)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
-        self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(30, 280, 161, 16))
-        self.label_6.setObjectName("label_6")
+        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName("gridLayout")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout.addWidget(self.pushButton, 13, 1, 1, 1)
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.gridLayout.addWidget(self.pushButton_3, 13, 3, 1, 1)
+        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.gridLayout.addWidget(self.pushButton_4, 13, 4, 1, 1)
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(30, 320, 141, 51))
         font = QtGui.QFont()
         font.setFamily("Avenir Next")
         font.setPointSize(46)
@@ -65,29 +53,43 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
-        self.label_8 = QtWidgets.QLabel(self.centralwidget)
-        self.label_8.setGeometry(QtCore.QRect(30, 380, 60, 16))
-        self.label_8.setObjectName("label_8")
+        self.gridLayout.addWidget(self.label_7, 11, 0, 1, 1)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout.addWidget(self.label_4, 6, 0, 1, 1)
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Avenir Next")
+        font.setPointSize(46)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout.addWidget(self.label_3, 3, 0, 1, 1)
+        self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        self.label_6.setObjectName("label_6")
+        self.gridLayout.addWidget(self.label_6, 9, 0, 1, 1)
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(490, 450, 113, 32))
         self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(620, 450, 113, 32))
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(750, 450, 113, 32))
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(360, 450, 113, 32))
-        self.pushButton.setObjectName("pushButton")
-        self.lcdNumber = QtWidgets.QLCDNumber(self.centralwidget)
-        self.lcdNumber.setGeometry(QtCore.QRect(1273, 10, 161, 51))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lcdNumber.sizePolicy().hasHeightForWidth())
-        self.lcdNumber.setSizePolicy(sizePolicy)
-        self.lcdNumber.setObjectName("lcdNumber")
+        self.gridLayout.addWidget(self.pushButton_2, 13, 2, 1, 1)
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Avenir Next")
+        font.setPointSize(46)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout.addWidget(self.label_5, 7, 0, 1, 1)
+        self.label_8 = QtWidgets.QLabel(self.centralwidget)
+        self.label_8.setObjectName("label_8")
+        self.gridLayout.addWidget(self.label_8, 10, 0, 1, 1)
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 2, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -96,15 +98,15 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Overview - Port"))
-        self.label.setText(_translate("MainWindow", "Good Evening, First Nmae"))
-        self.label_2.setText(_translate("MainWindow", "Overall Performance"))
-        self.label_3.setText(_translate("MainWindow", "$50,000"))
-        self.label_4.setText(_translate("MainWindow", "Total Value"))
-        self.label_5.setText(_translate("MainWindow", "+$20,000"))
-        self.label_6.setText(_translate("MainWindow", "Profit/Loss($)"))
-        self.label_7.setText(_translate("MainWindow", "-20%"))
-        self.label_8.setText(_translate("MainWindow", "TextLabel"))
-        self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
+        self.pushButton.setText(_translate("MainWindow", "PushButton"))
         self.pushButton_3.setText(_translate("MainWindow", "PushButton"))
         self.pushButton_4.setText(_translate("MainWindow", "PushButton"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+        self.label_7.setText(_translate("MainWindow", "-20%"))
+        self.label.setText(_translate("MainWindow", "Good Evening, First Nmae"))
+        self.label_4.setText(_translate("MainWindow", "Total Value"))
+        self.label_3.setText(_translate("MainWindow", "$50,000"))
+        self.label_6.setText(_translate("MainWindow", "Profit/Loss($)"))
+        self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
+        self.label_5.setText(_translate("MainWindow", "+$20,000"))
+        self.label_8.setText(_translate("MainWindow", "TextLabel"))
+        self.label_2.setText(_translate("MainWindow", "Overall Performance"))

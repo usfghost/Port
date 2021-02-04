@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/cbi/Projects/Port/ui/form_sign_in.ui'
+# Form implementation generated from reading ui file '/Users/joseph/Projects/Port/ui/form_sign_in.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -25,11 +25,30 @@ class Ui_Form(object):
 "    padding: 10px;\n"
 "    border: 1px solid #D96900;\n"
 "    border-radius: 10px;\n"
+"    selection-background-color: grey;\n"
+"    selection-color: white;\n"
+"}\n"
+"QLineEdit:hover {\n"
+"    border: 2px solid #EA7A10;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"    outline: none;\n"
+"    border: 2px solid #FFAA00;\n"
+"\n"
 "}\n"
 "QPushButton {\n"
 "    background: #D96900;\n"
 "    border: 1px solid #D96900;\n"
 "    border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background: #EA7A10;\n"
+"}\n"
+"QPushButton:focus {\n"
+"    background: #EA7A10;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background: #FFAA00;\n"
 "}")
         Form.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
         self.label = QtWidgets.QLabel(Form)
@@ -39,21 +58,26 @@ class Ui_Form(object):
         font.setPointSize(96)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.editUsername = QtWidgets.QLineEdit(Form)
-        self.editUsername.setGeometry(QtCore.QRect(90, 230, 271, 51))
-        self.editUsername.setObjectName("editUsername")
+        self.editEmail = QtWidgets.QLineEdit(Form)
+        self.editEmail.setGeometry(QtCore.QRect(90, 230, 271, 51))
+        self.editEmail.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.editEmail.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.editEmail.setObjectName("editEmail")
         self.editPassword = QtWidgets.QLineEdit(Form)
         self.editPassword.setGeometry(QtCore.QRect(90, 290, 271, 51))
+        self.editPassword.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.editPassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.editPassword.setObjectName("editPassword")
         self.buttonSubmit = QtWidgets.QPushButton(Form)
         self.buttonSubmit.setGeometry(QtCore.QRect(90, 350, 271, 51))
+        self.buttonSubmit.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.buttonSubmit.setObjectName("buttonSubmit")
         self.label_2 = QtWidgets.QLabel(Form)
         self.label_2.setGeometry(QtCore.QRect(120, 200, 201, 16))
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(Form)
         self.label_3.setGeometry(QtCore.QRect(110, 420, 221, 20))
+        self.label_3.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
         self.label_3.setStyleSheet("QLabel {\n"
 "    text-decoration: underline;\n"
 "}")
@@ -66,7 +90,7 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Port - Login"))
         self.label.setText(_translate("Form", "PORT"))
-        self.editUsername.setPlaceholderText(_translate("Form", "Email"))
+        self.editEmail.setPlaceholderText(_translate("Form", "Email"))
         self.editPassword.setPlaceholderText(_translate("Form", "Password"))
         self.buttonSubmit.setText(_translate("Form", "SIGN IN"))
         self.label_2.setText(_translate("Form", "Your Ultimate Portfolio Manager"))

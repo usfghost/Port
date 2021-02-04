@@ -26,11 +26,30 @@ QLineEdit {
 	padding: 10px;
 	border: 1px solid #D96900;
 	border-radius: 10px;
+	selection-background-color: grey;
+	selection-color: white;
+}
+QLineEdit:hover {
+	border: 2px solid #EA7A10;
+}
+QLineEdit:focus {
+	outline: none;
+	border: 2px solid #FFAA00;
+
 }
 QPushButton {
 	background: #D96900;
 	border: 1px solid #D96900;
 	border-radius: 10px;
+}
+QPushButton:hover {
+	background: #EA7A10;
+}
+QPushButton:focus {
+	background: #EA7A10;
+}
+QPushButton:pressed {
+	background: #FFAA00;
 }</string>
   </property>
   <property name="locale">
@@ -55,7 +74,7 @@ QPushButton {
     <string>PORT</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="editUsername">
+  <widget class="QLineEdit" name="editFirstName">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -88,7 +107,7 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>570</y>
+     <y>580</y>
      <width>271</width>
      <height>51</height>
     </rect>
@@ -114,7 +133,7 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>640</y>
+     <y>650</y>
      <width>221</width>
      <height>20</height>
     </rect>
@@ -128,11 +147,11 @@ QPushButton {
     <string>Don't have an account, Sign up now.</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="editRePassword">
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>490</y>
+     <y>500</y>
      <width>271</width>
      <height>51</height>
     </rect>
@@ -141,7 +160,7 @@ QPushButton {
     <string>Repeat Password</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="editLastName">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -154,7 +173,7 @@ QPushButton {
     <string>Last Name</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="editEmail">
    <property name="geometry">
     <rect>
      <x>100</x>

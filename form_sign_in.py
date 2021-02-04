@@ -11,25 +11,15 @@ class SignInWindow(qtw.QWidget, Ui_Form):
         # passing any arguments
 
         self.setupUi(self)
+        self.styleLineEdits()
         self.buttonSubmit.clicked.connect(self.authenticate)
 
+    def styleLineEdits(self):
+        self.editEmail.setAttribute(qtc.Qt.WA_MacShowFocusRect, 0)
+        self.editPassword.setAttribute(qtc.Qt.WA_MacShowFocusRect, 0)
+
     def authenticate(self):
-        username = self.editUsername.text()
-        password = self.editPassword.text()
-
-        loginres = self.authenticateCreds(username, password)
-        if loginres == '-1':
-            qtw.QMessageBox.critical(self, 'Error', 'Failed to login')
-        else:
-            userid = loginres
-            qtw.QMessageBox.information(self, 'Success', 'You are now logged in, UserID: ' + userid)
-
-    def authenticateCreds(self, username, password):
-        url = 'http://localhost:3000/php/user_authorize.php'
-        usercreds = { 'username': username, 'password': password }
-        result = requests.post(url, data = usercreds)
-        # qtw.QMessageBox.information(self, 'look at this', result.text)
-        return result.text
+        return
 
 if __name__ == '__main__':
     app = qtw.QApplication([])

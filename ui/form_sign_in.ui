@@ -26,11 +26,30 @@ QLineEdit {
 	padding: 10px;
 	border: 1px solid #D96900;
 	border-radius: 10px;
+	selection-background-color: grey;
+	selection-color: white;
+}
+QLineEdit:hover {
+	border: 2px solid #EA7A10;
+}
+QLineEdit:focus {
+	outline: none;
+	border: 2px solid #FFAA00;
+
 }
 QPushButton {
 	background: #D96900;
 	border: 1px solid #D96900;
 	border-radius: 10px;
+}
+QPushButton:hover {
+	background: #EA7A10;
+}
+QPushButton:focus {
+	background: #EA7A10;
+}
+QPushButton:pressed {
+	background: #FFAA00;
 }</string>
   </property>
   <property name="locale">
@@ -55,7 +74,7 @@ QPushButton {
     <string>PORT</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="editUsername">
+  <widget class="QLineEdit" name="editEmail">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -63,6 +82,12 @@ QPushButton {
      <width>271</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
    <property name="placeholderText">
     <string>Email</string>
@@ -76,6 +101,9 @@ QPushButton {
      <width>271</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
@@ -92,6 +120,9 @@ QPushButton {
      <width>271</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
    </property>
    <property name="text">
     <string>SIGN IN</string>
@@ -118,6 +149,9 @@ QPushButton {
      <width>221</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {

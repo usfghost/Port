@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/cbi/Projects/Port/ui/login_form.ui'
+# Form implementation generated from reading ui file '/Users/joseph/Projects/Port/ui/login_form.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -15,6 +15,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(351, 498)
+        Form.setAutoFillBackground(False)
         Form.setStyleSheet("QWidget {\n"
 "    background-color: rgb(42, 42, 42);\n"
 "    color: #EAEAEA;\n"

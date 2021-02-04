@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/cbi/Projects/Port/ui/form_sign_up.ui'
+# Form implementation generated from reading ui file '/Users/joseph/Projects/Port/ui/form_sign_up.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -25,11 +25,30 @@ class Ui_Form(object):
 "    padding: 10px;\n"
 "    border: 1px solid #D96900;\n"
 "    border-radius: 10px;\n"
+"    selection-background-color: grey;\n"
+"    selection-color: white;\n"
+"}\n"
+"QLineEdit:hover {\n"
+"    border: 2px solid #EA7A10;\n"
+"}\n"
+"QLineEdit:focus {\n"
+"    outline: none;\n"
+"    border: 2px solid #FFAA00;\n"
+"\n"
 "}\n"
 "QPushButton {\n"
 "    background: #D96900;\n"
 "    border: 1px solid #D96900;\n"
 "    border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background: #EA7A10;\n"
+"}\n"
+"QPushButton:focus {\n"
+"    background: #EA7A10;\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background: #FFAA00;\n"
 "}")
         Form.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
         self.label = QtWidgets.QLabel(Form)
@@ -39,34 +58,34 @@ class Ui_Form(object):
         font.setPointSize(96)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.editUsername = QtWidgets.QLineEdit(Form)
-        self.editUsername.setGeometry(QtCore.QRect(100, 220, 271, 51))
-        self.editUsername.setObjectName("editUsername")
+        self.editFirstName = QtWidgets.QLineEdit(Form)
+        self.editFirstName.setGeometry(QtCore.QRect(100, 220, 271, 51))
+        self.editFirstName.setObjectName("editFirstName")
         self.editPassword = QtWidgets.QLineEdit(Form)
         self.editPassword.setGeometry(QtCore.QRect(100, 430, 271, 51))
         self.editPassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.editPassword.setObjectName("editPassword")
         self.buttonSubmit = QtWidgets.QPushButton(Form)
-        self.buttonSubmit.setGeometry(QtCore.QRect(100, 570, 271, 51))
+        self.buttonSubmit.setGeometry(QtCore.QRect(100, 580, 271, 51))
         self.buttonSubmit.setObjectName("buttonSubmit")
         self.label_2 = QtWidgets.QLabel(Form)
         self.label_2.setGeometry(QtCore.QRect(130, 190, 201, 16))
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(Form)
-        self.label_3.setGeometry(QtCore.QRect(120, 640, 221, 20))
+        self.label_3.setGeometry(QtCore.QRect(120, 650, 221, 20))
         self.label_3.setStyleSheet("QLabel {\n"
 "    text-decoration: underline;\n"
 "}")
         self.label_3.setObjectName("label_3")
-        self.lineEdit = QtWidgets.QLineEdit(Form)
-        self.lineEdit.setGeometry(QtCore.QRect(100, 490, 271, 51))
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(Form)
-        self.lineEdit_2.setGeometry(QtCore.QRect(100, 290, 271, 51))
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.lineEdit_3 = QtWidgets.QLineEdit(Form)
-        self.lineEdit_3.setGeometry(QtCore.QRect(100, 360, 271, 51))
-        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.editRePassword = QtWidgets.QLineEdit(Form)
+        self.editRePassword.setGeometry(QtCore.QRect(100, 500, 271, 51))
+        self.editRePassword.setObjectName("editRePassword")
+        self.editLastName = QtWidgets.QLineEdit(Form)
+        self.editLastName.setGeometry(QtCore.QRect(100, 290, 271, 51))
+        self.editLastName.setObjectName("editLastName")
+        self.editEmail = QtWidgets.QLineEdit(Form)
+        self.editEmail.setGeometry(QtCore.QRect(100, 360, 271, 51))
+        self.editEmail.setObjectName("editEmail")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -75,11 +94,11 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Port - Login"))
         self.label.setText(_translate("Form", "PORT"))
-        self.editUsername.setPlaceholderText(_translate("Form", "First Name"))
+        self.editFirstName.setPlaceholderText(_translate("Form", "First Name"))
         self.editPassword.setPlaceholderText(_translate("Form", "Password"))
         self.buttonSubmit.setText(_translate("Form", "SIGN IN"))
         self.label_2.setText(_translate("Form", "Your Ultimate Portfolio Manager"))
         self.label_3.setText(_translate("Form", "Don\'t have an account, Sign up now."))
-        self.lineEdit.setPlaceholderText(_translate("Form", "Repeat Password"))
-        self.lineEdit_2.setPlaceholderText(_translate("Form", "Last Name"))
-        self.lineEdit_3.setPlaceholderText(_translate("Form", "Email Address"))
+        self.editRePassword.setPlaceholderText(_translate("Form", "Repeat Password"))
+        self.editLastName.setPlaceholderText(_translate("Form", "Last Name"))
+        self.editEmail.setPlaceholderText(_translate("Form", "Email Address"))
