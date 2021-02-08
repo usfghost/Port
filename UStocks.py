@@ -52,4 +52,3 @@ class UPortfolio:
         print(str(self.cost) + "\t" + str(self.value) + "\t" + str(self.profitLoss) + "\t" + str(self.profitLossPercent))
         print("Ticker\tQnty\tPrice\tValue\tLive Price\tLive Value\tP/L($)\t\tP/L(%)")
         print(positions)
-
