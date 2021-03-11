@@ -19,11 +19,9 @@ class OverviewForm(qtw.QMainWindow, Ui_MainWindow):
         super().__init__(*args, **kwargs)
         
         self.portfolio = UPortfolio([
-            UPosition("TSLA",6,548), 
-            UPosition("NIO", 22, 54.13), 
-            UPosition("ARKK", 10, 128.99), 
-            UPosition("NOK", 34, 5.29),
-            UPosition("GME",1, 243.5)
+            UPosition("TSLA",8,574), 
+            UPosition("NIO", 16, 53.81), 
+            UPosition("GBTC",4, 48.48)
         ])
 
         self.setupUi(self)
