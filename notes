@@ -1,0 +1,12 @@
+RESTful Convention
+api url
+    domain.com/api/customers
+    api.domain.com/customers
+http requests
+    GET:    retrieve data to resource
+    POST:   submit data to resource
+    PUT:    update a resource
+    DELETE: delete a resource
+
+GET mysite.com/api/users/ gets users
+POST mysite.com/api/users/ adds a new user

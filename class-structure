@@ -1,0 +1,12 @@
+User:
+    int id
+    String apiKey
+    String firstName
+    String email
+    String password
+
+Portfolio:
+    int id
+    int userId
+    List<Position> positions
+    
