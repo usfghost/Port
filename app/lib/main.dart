@@ -39,6 +39,12 @@ class _MyHomePageState extends State<MyHomePage> {
                           fontSize: 80.0, fontWeight: FontWeight.bold)),
                 ),
                 Container(
+                  padding: EdgeInsets.fromLTRB(0, 200.0, 0.0, 0.0),
+                  child: Column(
+                    children: <Widget>[TextField()],
+                  ),
+                ),
+                Container(
                   padding: EdgeInsets.fromLTRB(0, 300.0, 0.0, 0.0),
                   child: Column(
                     children: <Widget>[TextField()],
